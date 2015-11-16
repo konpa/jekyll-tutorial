@@ -10,8 +10,8 @@ title: Awesome Blog # the title of our blog
 email: awesomeguy@awesomesite.com # our email
 description: > # breaf description of our blog
   My awesome desciption.
-baseurl: "" # we won't need to set that in our case
-url: "http://127.0.0.1:4000/" # set it like this for now but we'll have to change this before to send it live
+baseurl: "/blog" # we won't need to set that in our case
+url: "username.github.io" # set it like this for now but we'll have to change this before to send it live
 twitter_username: awesome_guy # your twitter username
 github_username:  awesome_guy # your github username (if you have one)
 disqus_shortname: awesomeblog
