@@ -10,6 +10,8 @@ title: Awesome Blog # the title of our blog
 email: awesomeguy@awesomesite.com # our email
 description: > # breaf description of our blog
   My awesome desciption.
+subtitle-quote: "It is not that I'm so smart. But I stay with the questions much longer."
+subtitle-author: "Albert Einstein"
 baseurl: "/blog" # we won't need to set that in our case
 url: "username.github.io" # set it like this for now but we'll have to change this before to send it live
 twitter_username: awesome_guy # your twitter username
@@ -18,3 +20,5 @@ disqus_shortname: awesomeblog
 
 # Build settings
 markdown: kramdown
+gems: [jekyll-paginate]
+paginate: 3 # number of posts you want per page
