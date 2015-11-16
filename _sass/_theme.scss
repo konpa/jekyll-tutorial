@@ -141,3 +141,144 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+.single-post-nav {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  right: 15px;
+  z-index: 2;
+  color: $background-color;
+  ul {
+    width: 100%;
+    margin: 0;
+    list-style: none;
+  }
+  li {
+    float: left;
+    width: 33.33%;
+    min-height: 1px;
+    &:nth-child(2) {
+      text-align: center;
+    }
+    &:nth-child(3) {
+      text-align: right;
+    }
+    @include media-query($on-palm) {
+      width: 50%;
+      margin-left: 25%;
+      margin-bottom: 10px;
+      text-align: center;
+      &:nth-child(1),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+  a {
+    padding: 3px 10px;
+    font-family: $title-font-family;
+    color: $background-color;
+    border: 1px solid $background-color;
+    @include media-query($on-palm) {
+      display: block;
+      padding: 2px 10px;
+      font-size: 14px;
+    }
+    &:hover {
+      color: $text-color;
+      background: $brand-color;
+      border-color: $brand-color;
+      text-decoration: none;
+    }
+  }
+}
+.single-post {
+  margin-bottom: 30px;
+}
+.single-post-image {
+  min-width: 100%;
+}
+.single-post-header {
+  position: relative;
+  padding: 5%;
+  min-height: 350px;
+  text-align: center;
+  background: no-repeat center center fixed;
+  background-color: $grey-color-dark;
+  background-size: cover;
+  @include media-query($on-palm) {
+    min-height: 250px;
+  }
+  > div {
+    position: absolute;
+    bottom: 30px;
+    width: 90%;
+    @include media-query($on-palm) {
+      bottom: 15px;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+.single-post-title, .single-post-meta {
+  position: relative;
+  z-index: 2;
+  color: $background-color;
+}
+.single-post-title {
+  margin-bottom: 60px;
+  font-size: 70px;
+  @include media-query($on-palm) {
+    font-size: 35px;
+    text-shadow: none;
+  }
+}
+.single-post-meta {
+  font-size: 20px;
+  @include media-query($on-palm) {
+    font-size: 16px;
+  }
+}
+.single-post-summary {
+  margin: 60px 0;
+  font-size: 25px;
+  @include media-query($on-palm) {
+    margin: 30px 0;
+    font-size: 20px;
+  }
+}
+.single-post-content {
+  p {
+    margin: 20px 0;
+    font-size: 18px;
+    @include media-query($on-palm) {
+      margin: 15px 0;
+      font-size: 16px;
+    }
+  }
+  h1 {
+    margin: 60px 0 20px;
+    font-size: 40px;
+    line-height: 1;
+    @include media-query($on-palm) {
+      margin: 30px 0 15px;
+      font-size: 30px;
+    }
+  }
+  a {
+    color: $text-color;
+    background: lighten($brand-color, 20%);
+    &:hover {
+      text-decoration: none;
+      background: $brand-color;
+    }
+  }
+}
